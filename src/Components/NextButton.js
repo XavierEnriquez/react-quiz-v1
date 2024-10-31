@@ -1,4 +1,4 @@
-function NextButton({ dispatch, answer, index, numQuestions }) {
+function NextButton({ dispatch, answer, index, numQuestions, status }) {
   if (answer === null) return null;
   if (index < numQuestions - 1)
     return (
@@ -16,6 +16,15 @@ function NextButton({ dispatch, answer, index, numQuestions }) {
         onClick={() => dispatch({ type: "getResults" })}
       >
         Get Results
+      </button>
+    );
+  if (status === "finished")
+    return (
+      <button
+        className="btn btn-ui"
+        onClick={() => dispatch({ type: "RESTART" })}
+      >
+        Restart Quiz
       </button>
     );
 }
