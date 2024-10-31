@@ -4,7 +4,7 @@ This is a project from Udemy "Ultimate React Course 2024: React, Next.js, Redux 
 
 ## Local Development Scripts
 
-Open the terminal, make sure you'r in the project directory, and run:
+Open the terminal in VSCode, make sure you are in the project's directory, and run:
 
 ### `npm start`
 
@@ -18,7 +18,7 @@ Open another terminal node to run the json-server local api to populate the ques
 
 ### `npm run server`
 
-It will run a mock api server script in a different localhost window.\
+It will run a mock api server script in a separate browser window.\
 Open a new browser window in [http://localhost:8000/questions](http://localhost:8000/questions) to view the questions.json database.
 
 ## Learn More
