@@ -8,6 +8,7 @@ import StartScreen from "./StartScreen";
 import Question from "./Question";
 import NextButton from "./NextButton";
 import Progress from "./Progress";
+import ResultsScreen from "./ResultsScreen";
 
 const initialState = {
   questions: [],
@@ -39,6 +40,8 @@ function reducer(state, action) {
 
     case "nextQuestion":
       return { ...state, index: state.index + 1, answer: null };
+    case "getResults":
+      return { ...state, status: "finished" };
     default:
       throw new Error("Action unknown");
   }
@@ -82,8 +85,16 @@ function App() {
               dispatch={dispatch}
               answer={answer}
             />
-            <NextButton dispatch={dispatch} answer={answer} />
+            <NextButton
+              dispatch={dispatch}
+              answer={answer}
+              index={index}
+              numQuestions={numQuestions}
+            />
           </>
+        )}
+        {status === "finished" && (
+          <ResultsScreen points={points} maxPoints={maxPoints} />
         )}
       </Main>
     </div>
