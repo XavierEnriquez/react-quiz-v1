@@ -31,7 +31,8 @@ function reducer(state, action) {
         ...initialState,
         status: "ready",
         questions: state.questions,
-        highscore: state.highscore,
+        highscore:
+          state.points > state.highscore ? state.points : state.highscore,
       };
     case "dataReceived":
       return { ...state, questions: action.payload, status: "ready" };
@@ -68,6 +69,8 @@ function reducer(state, action) {
       return {
         ...state,
         status: "finished",
+        highscore:
+          state.points > state.highscore ? state.points : state.highscore,
       };
     // return {
     //   ...state,
