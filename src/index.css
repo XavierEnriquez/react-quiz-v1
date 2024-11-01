@@ -36,8 +36,9 @@ body {
   justify-content: center;
 }
 
-.main {
-  width: 50rem;
+.main,
+.footer {
+  width: 54rem;
 }
 
 .app-header {
@@ -47,6 +48,10 @@ body {
   align-items: center;
   /* justify-content: space-between; */
 }
+
+/* .footer {
+  width: 50rem;
+} */
 
 .error {
   text-align: center;
@@ -158,6 +163,7 @@ progress {
 .btn-option {
   width: 100%;
   text-align: left;
+  padding: 1.2rem 3rem;
 }
 
 .btn-option.correct {
