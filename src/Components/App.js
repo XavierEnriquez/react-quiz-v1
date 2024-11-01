@@ -22,7 +22,7 @@ const initialState = {
   secondsTimer: null,
 };
 
-const SECS_TIMER = 15;
+const SECS_TIMER = 10;
 
 function reducer(state, action) {
   switch (action.type) {
@@ -67,9 +67,13 @@ function reducer(state, action) {
     case "tickTock":
       return {
         ...state,
-        secondsTimer: state.secondsTimer - 1,
-        status: state.secondsTimer === 0 ? "finished" : state.status,
+        status: "finished",
       };
+    // return {
+    //   ...state,
+    //   secondsTimer: state.secondsTimer - 1,
+    //   status: state.secondsTimer === 0 ? "finished" : state.status,
+    // };
 
     default:
       throw new Error("Action unknown");
