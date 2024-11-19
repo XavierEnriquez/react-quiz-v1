@@ -1,4 +1,4 @@
-# React-Quiz Project V1
+# React-Quiz-V1 Project
 
 This is a project from Udemy "Ultimate React Course 2024: React, Next.js, Redux & More" by Jonas Schmedtmann.
 Section 16: The Advanced useReducer Hook / Lecture: 190
